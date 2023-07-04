@@ -1,6 +1,6 @@
-When some text copied from a PDF is in the clipboard, `Paste PDF text from clipboard, removing undue line breaks` command peplace line breaks by space and paste the text in the current block, at the current cursor position.
+When some text copied from a PDF is in the clipboard, the command `Paste PDF text from clipboard, removing undue line breaks` replace line breaks by space and paste the text in the current block, at the current cursor position.
 
-Provide also the corresponding SmartBlock command: `REPLACENEWLINEBYSPACE` with the text to paste as first argument.
+Provide also the corresponding SmartBlocks command: `REPLACENEWLINEBYSPACE` with the text to paste as first argument.
 You can use it with the following SmartBlock (it can also be installed from the SmartBlocks Store).
 
 ```
