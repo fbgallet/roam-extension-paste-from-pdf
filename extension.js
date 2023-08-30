@@ -83,13 +83,13 @@ function getBlockContent(uid) {
   else return null;
 }
 
-async function pasteFromPDF(uid) {
+async function pasteFromPDF() {
   const text = await navigator.clipboard.readText();
   return replaceNewLineBySpace(text);
 }
 
 function replaceNewLineBySpace(text) {
-  return text.replaceAll("\r\n", " ").replaceAll("  ", "\r\n");
+  return text.replaceAll(/\r\n|\r|\n/g, " ").replaceAll("  ", "\n");
 }
 
 export default {
@@ -111,7 +111,7 @@ export default {
         if (startUid) {
           // console.log(currentPosition.start);
           // console.log(currentPosition.end);
-          textFormated = await pasteFromPDF(startUid);
+          textFormated = await pasteFromPDF();
           let currentText = getBlockContent(startUid);
           let textToInsert =
             currentText.slice(0, currentPosition.start) +
